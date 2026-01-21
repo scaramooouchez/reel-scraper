@@ -1,0 +1,238 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+@font-face {
+  font-family: genshin-main;
+  src: url(asset/font/genshin-main.ttf);
+}
+@font-face {
+  font-family: genshin-sub;
+  src: url(asset/font/genshin-sub.ttf);
+}
+
+body {
+  background-image: url(asset/background/70.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-family: genshin-main;
+  color: #0d031b;
+  padding: .2em;
+  text-align: center;
+}
+
+p {
+  font-family: genshin-sub;
+  color: #39393a;
+  font-size: clamp(.8rem, 1vw, 1rem);
+  padding: 0%;
+  text-align: center;
+}
+
+
+#urlInput {
+  width: clamp(1em,100vw,100px);
+  background:url(asset/background/65.png) center/cover no-repeat;
+  padding: 0.6em 1.2em;
+  border: none;
+  color: rgb(0, 0, 0);
+  margin: 1em;
+
+} 
+
+#urlInput:hover,
+#urlInput:focus {
+  outline: none;
+  background: url(asset/background/111.png) center/cover no-repeat;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+
+  
+  
+}
+ 
+
+
+
+#downloadForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
+
+
+}
+
+#continue {
+  width: 33px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  
+  background: url(asset/background/1.png) center/cover no-repeat;
+}
+
+
+#continue:hover {
+  background: url(asset/background/2.png) center/cover no-repeat;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+  
+
+#videoPlayer {
+  width: 100%;
+  height: auto;
+  max-width:300px;
+  display: none;
+  border-radius: 2em;
+  padding: 0% 0% 0.6em 0%;
+  margin: 0;
+
+  
+
+}
+
+
+#videoPlayer.show {
+  display: block;
+  opacity: 1;
+}
+
+
+#Button {
+  width: 33px;
+  height: 32px;
+  border-radius: 50%;
+  display: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background: url(asset/background/10.png) center/cover no-repeat;
+
+  
+
+}
+
+
+#Button.show {
+  display: inline-block;
+  opacity: 1;
+  
+ 
+
+}
+
+
+
+#status {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  
+  
+  
+}
+
+
+#downloadLink {
+ width: 33px;
+ height: 32px;
+ border: none;
+ border-radius: 50%;
+ display: none;
+
+
+}
+
+#downloadLink.show {
+  display:  block;
+  opacity: 1;
+;
+}
+
+
+
+
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+  body {
+    background: url(asset/background/70.png) 0% 25%/cover no-repeat;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  body {
+    background: url(asset/background/70.png) 0% 25%/cover no-repeat;
+  }
+
+}
+
+
+
+
+
+footer {
+
+
+
+
+
+.signature {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(asset/background/93.png) center/360px  no-repeat;
+  background-color: beige;
+}
+
+.name {
+  color: #222;
+  font-weight: 600;
+  /* This creates the style you asked about earlier */
+  font-variant: small-caps; 
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+}

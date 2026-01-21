@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="asset/icons/instagram.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reel Downloader</h1>
+        <p>Extract artifacts from the void.</p>
+        
+        <form id="downloadForm" autocomplete="off">
+            <input type="text" id="urlInput" placeholder="Instagram Link..." required>
+            <button type="submit" id="continue"></button>
+        </form>
+
+        <div id="result">
+            
+            
+            <video id="videoPlayer" controls></video>
+            
+            <a id="downloadLink" href="#" target="_blank">
+                <button id="Button"></button>
+            </a>
+             <p id="status">Waiting for input . . . </p>
+        </div>
+    </div>
+
+
+      <footer class="ultra-clean-footer">
+  <div class="footer-divider"></div>
+  <p class="signature">made by <span class="name">scaramouche <a href="https://www.instagram.com/scaramo_ouche/" target="_blank"><img src="asset/icons/instagram.png" width="32px"></a></span></p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
