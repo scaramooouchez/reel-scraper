@@ -15,19 +15,19 @@ document
     // 2. Reset UI State
     resultDiv.style.display = "block";
     statusText.innerText = "Connecting to the void...";
-    statusText.style.color = "#b0b0b0"; // Reset text color
+    statusText.style.color = "#b0b0b0"; 
     statusText.classList.remove("success-text");
 
     videoPlayer.classList.remove("show");
-    downloadBtn.classList.remove("show")// Hide video
-    videoPlayer.pause(); // Stop previous video
+    downloadBtn.classList.remove("show");
+    videoPlayer.pause(); 
     videoPlayer.src = "";
 
-    downloadLink.classList.remove("show"); // Hide download button
-    container.classList.remove("success-mode"); // Remove green border
+    downloadLink.classList.remove("show"); 
+    container.classList.remove("success-mode"); 
 
     try {
-      // 3. Send Request to Server
+      
       const response = await fetch("/get-video", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -36,27 +36,27 @@ document
 
       const data = await response.json();
 
-      // 4. Handle Response
+      
       if (data.status === "success") {
-        // Update Status
+        
         statusText.innerText = "Artifact Extracted Successfully.";
         statusText.classList.add("success-text");
 
-        // Add Green Glow
+        
         container.classList.add("success-mode");
 
-        // Show Video (Fade In)
+        
         videoPlayer.src = data.video_url;
         videoPlayer.classList.add("show");
 
-        // Setup Download Button
+        
         downloadLink.href = `/download-proxy?url=${encodeURIComponent(data.video_url)}`;
         downloadLink.classList.add("show");
         downloadBtn.classList.add("show");
       } else {
         statusText.innerText =
           "Error: " + (data.error || "The void returned nothing.");
-        statusText.style.color = "#ff4d4d"; // Red color
+        statusText.style.color = "#ff4d4d"; 
       }
     } catch (err) {
       console.error(err);
@@ -64,5 +64,6 @@ document
       statusText.style.color = "#ff4d4d";
     }
   });
+
 
  
